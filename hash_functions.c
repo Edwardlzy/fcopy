@@ -2,9 +2,7 @@
 #include "hash.h"
 #include <stdlib.h>
 
-// Complete these two functions according to the assignment specifications
-
-
+// A function that computes the hash value of the given file.
 char *hash(FILE *f) {
     char *hash_val = malloc(BLOCK_SIZE);
     if (f == NULL) {
@@ -25,7 +23,6 @@ char *hash(FILE *f) {
             j++;
         }
     }
-    //printf("hash_val is %s\n", hash_val);
 
     return hash_val;
 }
