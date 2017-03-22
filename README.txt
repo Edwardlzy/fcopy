@@ -1,1 +1,4 @@
-When a directory entry points to the same file’s inode that another different directory entry points to, it is a hard link. Therefore, to detect two files are hard links, we need to compare the inodes they are pointing to. However, to make such comparisons, we need to store every inode we visited, which would be very inefficient. When the other hard link to the same file resides outside the destination or source directories, we would never visit it and store its inode for comparisons. And with different processes, it is hard to share the stored inode information.
+This is an implementation of fcopy.
+
+It supports copying a file or a directory to the designated destination.
+If the files/directories under destination are already up to date, no copying occurs.
